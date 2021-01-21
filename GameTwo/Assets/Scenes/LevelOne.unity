@@ -540,7 +540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -171, y: 52.2}
+  m_AnchoredPosition: {x: -171, y: 52.200195}
   m_SizeDelta: {x: 348.68726, y: 104.42647}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222539199
@@ -824,6 +824,7 @@ GameObject:
   - component: {fileID: 1683817596}
   - component: {fileID: 1683817595}
   - component: {fileID: 1683817597}
+  - component: {fileID: 1683817598}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -936,6 +937,19 @@ PolygonCollider2D:
       - {x: 1.28, y: 0.065079056}
       - {x: 1.2191601, y: 0.073875904}
       - {x: 1.0367725, y: 0.15507929}
+--- !u!114 &1683817598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683817594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd243300b9f2b4cba90c20ef55f695c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidthUnits: 16
 --- !u!1 &1701516296
 GameObject:
   m_ObjectHideFlags: 0
