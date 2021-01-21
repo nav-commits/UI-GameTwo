@@ -12,7 +12,7 @@ public class Paddle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Screen Width : " + Screen.width);
     }
 
     // Update is called once per frame
@@ -23,10 +23,5 @@ public class Paddle : MonoBehaviour
        paddlepos.x = Mathf.Clamp(mouseposUnits, minX, maxX);
        transform.position = paddlepos;
 
-        if(screenWidthUnits < 16f)
-        {
-            minX = -8f;
-            maxX = 9f;
-        }
     }
 }
