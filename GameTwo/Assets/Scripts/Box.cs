@@ -7,39 +7,38 @@ public class Box : MonoBehaviour
 {
     public int score;
     public Text ScoreText;
-    public bool lose = false;
+    SpriteRenderer sprite;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        sprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
       
-        if(score >= 2)
+        if(score >= 1)
         {
             youWin();
         }
-
         
     }
-
-   
-
+  
     private void youWin()
     {
         ScoreText.text = "YOU WIN";
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Addscore();
-        Destroy(other.gameObject);
+        Destroy(collision.gameObject);
+        sprite.color = new Color(2, 0, 0, 1);
     }
 
+    
 
     public void Addscore()
     {
