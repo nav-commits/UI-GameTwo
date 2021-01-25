@@ -21,26 +21,26 @@ public class Box : MonoBehaviour
       
         if(score >= 1)
         {
-            youWin();
+            YouWin();
         }
         
     }
   
-    private void youWin()
+    private void YouWin()
     {
         ScoreText.text = "YOU WIN";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Addscore();
+        AddScore();
         Destroy(collision.gameObject);
         sprite.color = new Color(2, 0, 0, 1);
     }
 
     
 
-    public void Addscore()
+    public void AddScore()
     {
         score++;
         ScoreText.text = "Score:"+ score.ToString();
