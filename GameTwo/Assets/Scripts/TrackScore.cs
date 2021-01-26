@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class TrackScore : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class TrackScore : MonoBehaviour
    
     void Start()
     {
-        score = 10;
+        score = 5;
         ScoreText.text = "Player Score:" + score.ToString();
     }
 
@@ -28,7 +28,19 @@ public class TrackScore : MonoBehaviour
     {
 
         score--;
-        PlayerScore[0].SetActive(false);
+
+        for(int i = 0; i <PlayerScore.Length; i++)
+        {
+            if (score < 5)
+            {
+                PlayerScore[i].SetActive(false);
+            }
+
+            else
+            {
+                PlayerScore[i].SetActive(true);
+            }
+        }
 
         // making sure score doesnt go past 0
         if(score == -1)
@@ -38,5 +50,18 @@ public class TrackScore : MonoBehaviour
         }
 
         ScoreText.text = "Player Score:" + score.ToString();
+
+        if(score == 0)
+        {
+            BackHome();
+        }
+    }
+
+
+    public void BackHome()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
+
+

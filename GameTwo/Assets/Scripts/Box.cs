@@ -24,7 +24,7 @@ public class Box : MonoBehaviour
     void Update()
     {
 
-        if (score >= 3)
+        if (score >= 4)
         {
             YouWin();
             
