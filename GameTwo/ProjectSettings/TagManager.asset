@@ -47,3 +47,6 @@ TagManager:
   - name: Ball
     uniqueID: 2379338885
     locked: 0
+  - name: Block Square 1
+    uniqueID: 83327533
+    locked: 0

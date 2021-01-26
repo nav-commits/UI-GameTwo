@@ -33,7 +33,6 @@ public class Box : MonoBehaviour
        
         if (Input.GetMouseButton(0))
         {
-           
             foreach(GameObject boxes in Boxes)
             {
                 boxes.SetActive(false);
