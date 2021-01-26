@@ -17,12 +17,10 @@ public class TrackScore : MonoBehaviour
         ScoreText.text = "Player Score:" + score.ToString();
     }
 
-
     void Update()
     {
 
     }
-
 
     public void DestoryScore()
     {
@@ -46,7 +44,6 @@ public class TrackScore : MonoBehaviour
         if(score == -1)
         {
             score = 0;
-            ScoreText.text = " Player Score:" + score.ToString();
         }
 
         ScoreText.text = "Player Score:" + score.ToString();
