@@ -24,13 +24,13 @@ public class Box : MonoBehaviour
     void Update()
     {
 
-        if (score >= 2)
+        if (score >= 3)
         {
             YouWin();
+            
         }
 
        
-
         if (Input.GetMouseButton(0))
         {
            
@@ -46,7 +46,7 @@ public class Box : MonoBehaviour
   
     private void YouWin()
     {
-        ScoreText.text = "YOU WIN";
+        ScoreText.text = "YOU WIN!!!";
     }
 
 
