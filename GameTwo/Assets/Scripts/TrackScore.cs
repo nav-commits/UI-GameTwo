@@ -40,7 +40,7 @@ public class TrackScore : MonoBehaviour
             }
         }
 
-        // making sure score doesnt go past 0
+      
         if(score == -1)
         {
             score = 0;

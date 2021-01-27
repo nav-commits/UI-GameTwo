@@ -12,40 +12,40 @@ public class Box : MonoBehaviour
     SpriteRenderer sprite;
     public int score;
     public GameObject[] Boxes;
-
-
+    public GameObject[] Balls;
+    public bool draw;
+   
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-    
+        draw = false;
+        ScoreText.text = "Player Score:" + score.ToString();
     }
 
   
     void Update()
     {
 
-        if (score >= 4)
+        if (score > 2)
         {
             YouWin();
             
         }
 
-       
-        if (Input.GetMouseButton(0))
+   
+        if (score == 2 || score == 3)
         {
-            foreach(GameObject boxes in Boxes)
-            {
-                boxes.SetActive(false);
-               
-            }
-
-
+            ScoreText.text = "Need One more to win!";
+            draw = true;
         }
+
+       
+
     }
   
     private void YouWin()
     {
-        ScoreText.text = "YOU WIN!!!";
+        ScoreText.text = "YOU WIN, NEXT LEVEL!!!";
     }
 
 
@@ -60,7 +60,8 @@ public class Box : MonoBehaviour
 
     public void AddScore()
     {
+                
         score++;
-        ScoreText.text = "Score:" + score.ToString();
+        ScoreText.text = "Player Score:" + score.ToString();
     }
 }
