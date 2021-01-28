@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class TrackScore : MonoBehaviour
+
 {
     public GameObject [] PlayerScore;
     public Text ScoreText;
@@ -12,9 +13,10 @@ public class TrackScore : MonoBehaviour
     public int scoretwo;
     public Text ScoreTextTwo;
     public GameObject[] PlayerScoreTwo;
-    public bool playerpower = false;
+   
 
     void Start()
+
     {
         score = 5;
         ScoreText.text = "Player Score:" + score.ToString();
