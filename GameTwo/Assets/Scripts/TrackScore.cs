@@ -32,11 +32,9 @@ public class TrackScore : MonoBehaviour
 
     public void DestoryScore()
     {
-        // decrease the score from damage
+       
         score--;
 
-        for (int i = 0; i < PlayerScore.Length; i++)
-        {
             if (score < 5)
             {
                 PlayerScore[0].SetActive(false);
@@ -62,13 +60,6 @@ public class TrackScore : MonoBehaviour
                 PlayerScore[4].SetActive(false);
             }
 
-        }
-
-        // to make sure score doesnt go below 0
-        if (score == -1)
-        {
-            score = 0;
-        }
 
         ScoreText.text = "Player Score:" + score.ToString();
 
@@ -83,8 +74,6 @@ public class TrackScore : MonoBehaviour
     {
         scoretwo++;
 
-        for (int i = 0; i < PlayerScoreTwo.Length; i++)
-        {
             if (scoretwo > 0)
             {
                 PlayerScoreTwo[0].SetActive(true);
@@ -115,7 +104,7 @@ public class TrackScore : MonoBehaviour
                 PlayerScoreTwo[5].SetActive(true);
             }
             
-        }
+        
 
         if(scoretwo == 5)
         {
@@ -135,7 +124,7 @@ public class TrackScore : MonoBehaviour
 
     public void WinGame()
     {
-        SceneManager.LoadScene("Start Menu");
+        SceneManager.LoadScene("Win");
     }
 
 }
