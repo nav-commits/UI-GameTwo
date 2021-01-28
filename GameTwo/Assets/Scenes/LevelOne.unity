@@ -563,9 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 29348569}
   score: 0
-  Boxes: []
-  Balls: []
-  draw: 0
+  gameSpeed: 1
 --- !u!61 &81007234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -650,7 +648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81007232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.21, y: -6.17, z: 987.72504}
+  m_LocalPosition: {x: 8.04, y: -6.21, z: 987.72504}
   m_LocalScale: {x: 1.7127428, y: 1.4648337, z: 1}
   m_Children: []
   m_Father: {fileID: 166805683}
@@ -726,13 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 0}
   score: 0
-  Boxes:
-  - {fileID: 1856849721}
-  - {fileID: 81007232}
-  - {fileID: 640450700}
-  - {fileID: 497346866}
-  Balls: []
-  draw: 0
+  gameSpeed: 1
 --- !u!1 &369625411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,9 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 29348569}
   score: 0
-  Boxes: []
-  Balls: []
-  draw: 0
+  gameSpeed: 1
 --- !u!61 &497346869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1105,7 +1095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497346866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -6.34, z: 987.72504}
+  m_LocalPosition: {x: -4.55, y: -6.38, z: 987.72504}
   m_LocalScale: {x: 1.71274, y: 1.4648299, z: 1}
   m_Children: []
   m_Father: {fileID: 166805683}
@@ -1145,9 +1135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 29348569}
   score: 0
-  Boxes: []
-  Balls: []
-  draw: 0
+  gameSpeed: 1
 --- !u!61 &640450702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1390,14 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 0}
   score: 0
-  Boxes: []
-  Balls:
-  - {fileID: 369625411}
-  - {fileID: 1300486474}
-  - {fileID: 2116090484}
-  - {fileID: 1386835562}
-  - {fileID: 17351565}
-  draw: 0
+  gameSpeed: 1
 --- !u!1 &1048079876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,10 +1496,10 @@ RectTransform:
   m_Father: {fileID: 64705650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1251, y: 609}
-  m_SizeDelta: {x: 348.68726, y: 104.42647}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -57}
+  m_SizeDelta: {x: 348.68726, y: 104.42645}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222539199
 MonoBehaviour:
@@ -2771,7 +2752,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856849721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.47, y: -6.06, z: 987.72504}
+  m_LocalPosition: {x: 2.37, y: -6.27, z: 987.72504}
   m_LocalScale: {x: 1.7127428, y: 1.4648337, z: 1}
   m_Children: []
   m_Father: {fileID: 166805683}
@@ -2817,9 +2798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreText: {fileID: 29348569}
   score: 0
-  Boxes: []
-  Balls: []
-  draw: 0
+  gameSpeed: 1
 --- !u!50 &1856849726
 Rigidbody2D:
   serializedVersion: 4

@@ -11,35 +11,25 @@ public class Box : MonoBehaviour
     public Text ScoreText;
     SpriteRenderer sprite;
     public int score;
-    public GameObject[] Boxes;
-    public GameObject[] Balls;
-    public bool draw;
+   [SerializeField] float gameSpeed = 1f;
    
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        draw = false;
         ScoreText.text = "Player Score:" + score.ToString();
     }
 
   
     void Update()
     {
+        Time.timeScale = gameSpeed;
 
         if (score > 2)
+
         {
             YouWin();
             
         }
-
-   
-        if (score == 2 || score == 3)
-        {
-            ScoreText.text = "Need One more to win!";
-            draw = true;
-        }
-
-       
 
     }
   
@@ -56,8 +46,7 @@ public class Box : MonoBehaviour
         sprite.color = new Color(2, 0, 0, 1);
     }
 
-    
-
+   
     public void AddScore()
     {
                 
