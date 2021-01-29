@@ -11,7 +11,7 @@ public class Box : MonoBehaviour
     public Text ScoreText;
     SpriteRenderer sprite;
     public int score;
-   
+    
 
 
     void Start()
@@ -19,24 +19,33 @@ public class Box : MonoBehaviour
         score = 5;
         sprite = GetComponent<SpriteRenderer>();
         ScoreText.text = "Player Score:" + score.ToString();
+     
     }
 
 
     void Update()
     {
-        
+
         if (score >= 9)
 
         {
             YouWin();
 
-
         }
 
-        if(score == 2 || score == 3)
+        if (score == 2 || score == 3)
         {
+            StartCoroutine(ExecuteAfterTime());
             ScoreText.text = "LOSING!!!";
         }
+
+    }
+
+    public IEnumerator ExecuteAfterTime()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("GameOver");
+
     }
 
 
