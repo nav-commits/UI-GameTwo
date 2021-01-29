@@ -12,33 +12,30 @@ public class Box : MonoBehaviour
     SpriteRenderer sprite;
     public int score;
     [SerializeField] float gameSpeed = 1f;
-   
+
 
     void Start()
     {
+        score = 5;
         sprite = GetComponent<SpriteRenderer>();
         ScoreText.text = "Player Score:" + score.ToString();
     }
 
-  
+
     void Update()
     {
         Time.timeScale = gameSpeed;
 
-        if (score >= 4)
+        if (score >= 9)
 
         {
             YouWin();
-            
-        }
 
-        if(score == 3)
-        {
-            ScoreText.text = "YOU ARE LOSING!!";
-        }
 
+        }
     }
-  
+
+
     private void YouWin()
     {
         ScoreText.text = "YOU WIN, NEXT LEVEL!!!";
@@ -56,8 +53,11 @@ public class Box : MonoBehaviour
 
     public void Lose()
     {
+
         score--;
         ScoreText.text = "Player Score:" + score.ToString();
+        Debug.Log(score);
+            
     }
 
     public void AddScore()
