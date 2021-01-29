@@ -11,7 +11,7 @@ public class Box : MonoBehaviour
     public Text ScoreText;
     SpriteRenderer sprite;
     public int score;
-    [SerializeField] float gameSpeed = 1f;
+   
 
 
     void Start()
@@ -24,14 +24,18 @@ public class Box : MonoBehaviour
 
     void Update()
     {
-        Time.timeScale = gameSpeed;
-
+        
         if (score >= 9)
 
         {
             YouWin();
 
 
+        }
+
+        if(score == 2 || score == 3)
+        {
+            ScoreText.text = "LOSING!!!";
         }
     }
 
@@ -56,7 +60,7 @@ public class Box : MonoBehaviour
 
         score--;
         ScoreText.text = "Player Score:" + score.ToString();
-        Debug.Log(score);
+       
             
     }
 
@@ -65,5 +69,6 @@ public class Box : MonoBehaviour
                 
         score++;
         ScoreText.text = "Player Score:" + score.ToString();
+        
     }
 }

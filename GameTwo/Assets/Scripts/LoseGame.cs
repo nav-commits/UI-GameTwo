@@ -7,7 +7,7 @@ public class LoseGame : MonoBehaviour
 {
 
     public Box Box;
-    public float speed = 5f;
+    public float speed = 10f;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,7 +24,7 @@ public class LoseGame : MonoBehaviour
 
     public void Update()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"),0f, 4f);
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"),0f, 2f);
         transform.position += movement * speed * Time.deltaTime;
     }
 
