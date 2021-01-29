@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TrackScore : MonoBehaviour
+public class Leveltwo : MonoBehaviour
 
 {
     public GameObject [] PlayerScore;

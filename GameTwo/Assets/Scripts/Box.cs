@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 
 public class Box : MonoBehaviour
@@ -11,8 +11,9 @@ public class Box : MonoBehaviour
     public Text ScoreText;
     SpriteRenderer sprite;
     public int score;
-   [SerializeField] float gameSpeed = 1f;
+    [SerializeField] float gameSpeed = 1f;
    
+
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -24,11 +25,16 @@ public class Box : MonoBehaviour
     {
         Time.timeScale = gameSpeed;
 
-        if (score == 5)
+        if (score >= 4)
 
         {
             YouWin();
             
+        }
+
+        if(score == 3)
+        {
+            ScoreText.text = "YOU ARE LOSING!!";
         }
 
     }
@@ -44,9 +50,16 @@ public class Box : MonoBehaviour
         AddScore();
         Destroy(collision.gameObject);
         sprite.color = new Color(2, 0, 0, 1);
+        
+
     }
 
-   
+    public void Lose()
+    {
+        score--;
+        ScoreText.text = "Player Score:" + score.ToString();
+    }
+
     public void AddScore()
     {
                 
