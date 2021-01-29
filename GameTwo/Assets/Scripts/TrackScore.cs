@@ -37,30 +37,30 @@ public class TrackScore : MonoBehaviour
        
         score--;
 
-            if (score < 5)
-            {
-                PlayerScore[0].SetActive(false);
-            }
+        if (score < 5)
+        {
+            PlayerScore[0].SetActive(false);
+        }
 
-            if(score < 4)
-            {
-                PlayerScore[1].SetActive(false);
-            }
+        if (score < 4)
+        {
+            PlayerScore[1].SetActive(false);
+        }
 
-            if (score < 3)
-            {
-                PlayerScore[2].SetActive(false);
-            }
+        if (score < 3)
+        {
+            PlayerScore[2].SetActive(false);
+        }
 
-            if (score < 2)
-            {
-                PlayerScore[3].SetActive(false);
-            }
+        if (score < 2)
+        {
+            PlayerScore[3].SetActive(false);
+        }
 
-            if (score < 1)
-            {
-                PlayerScore[4].SetActive(false);
-            }
+        if (score < 1)
+        {
+            PlayerScore[4].SetActive(false);
+        }
 
 
         ScoreText.text = "Player Score:" + score.ToString();
@@ -76,39 +76,39 @@ public class TrackScore : MonoBehaviour
     {
         scoretwo++;
 
-            if (scoretwo > 0)
-            {
-                PlayerScoreTwo[0].SetActive(true);
-            }
+        if (scoretwo > 0)
+        {
+            PlayerScoreTwo[0].SetActive(true);
+        }
 
-            if (scoretwo >1)
-            {
-                PlayerScoreTwo[1].SetActive(true);
-            }
+        if (scoretwo > 1)
+        {
+            PlayerScoreTwo[1].SetActive(true);
+        }
 
-            if (scoretwo > 2)
-            {
-                PlayerScoreTwo[2].SetActive(true);
-            }
+        if (scoretwo > 2)
+        {
+            PlayerScoreTwo[2].SetActive(true);
+        }
 
-            if (scoretwo > 3)
-            {
-                PlayerScoreTwo[3].SetActive(true);
-            }
+        if (scoretwo > 3)
+        {
+            PlayerScoreTwo[3].SetActive(true);
+        }
 
-            if (scoretwo > 4)
-            {
-                PlayerScoreTwo[4].SetActive(true);
-            }
+        if (scoretwo > 4)
+        {
+            PlayerScoreTwo[4].SetActive(true);
+        }
 
-            if (scoretwo > 5)
-            {
-                PlayerScoreTwo[5].SetActive(true);
-            }
-            
-        
+        if (scoretwo > 5)
+        {
+            PlayerScoreTwo[5].SetActive(true);
+        }
 
-        if(scoretwo == 5)
+
+
+        if (scoretwo == 5)
         {
             WinGame();
         }

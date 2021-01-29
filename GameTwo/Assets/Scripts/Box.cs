@@ -24,7 +24,7 @@ public class Box : MonoBehaviour
     {
         Time.timeScale = gameSpeed;
 
-        if (score > 2)
+        if (score == 5)
 
         {
             YouWin();
