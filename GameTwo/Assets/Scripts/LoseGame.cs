@@ -34,6 +34,7 @@ public class LoseGame : MonoBehaviour
         else
             transform.Translate(-Vector2.right * speed * Time.deltaTime);
 
+
         if (transform.position.x >= 11.47f)
         {
             dirRight = false;

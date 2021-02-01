@@ -26,30 +26,19 @@ public class Box : MonoBehaviour
     void Update()
     {
 
-        if (score >= 9)
+        if (score >= 7)
 
         {
             YouWin();
 
         }
 
-        if (score == 2 || score == 3)
-        {
-            StartCoroutine(ExecuteAfterTime());
-            ScoreText.text = "LOSING!!!";
-        }
-
     }
 
-    public IEnumerator ExecuteAfterTime()
-    {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("GameOver");
-
-    }
 
 
     private void YouWin()
+
     {
         ScoreText.text = "YOU WIN, NEXT LEVEL!!!";
     }
@@ -81,3 +70,4 @@ public class Box : MonoBehaviour
         
     }
 }
+
