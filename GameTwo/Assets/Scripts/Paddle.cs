@@ -6,12 +6,6 @@ public class Paddle : MonoBehaviour
 {
    
     [SerializeField] float screenWidthUnits = 16f;
-   
-
-    void Start()
-    {
-        
-    }
 
    
     void Update()
@@ -24,6 +18,7 @@ public class Paddle : MonoBehaviour
 
    
 }
+
 
 
 
