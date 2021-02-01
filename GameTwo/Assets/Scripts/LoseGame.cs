@@ -7,8 +7,10 @@ public class LoseGame : MonoBehaviour
 {
 
     public Box Box;
-    public float speed = 10f;
-
+    public float speed = 1f;
+    public bool dirRight;
+    public float gametime;
+    
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (Box.score < 3)
@@ -22,10 +24,27 @@ public class LoseGame : MonoBehaviour
        
     }
 
+
+
     public void Update()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"),0f, 2f);
-        transform.position += movement * speed * Time.deltaTime;
+     
+        if (dirRight)
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        else
+            transform.Translate(-Vector2.right * speed * Time.deltaTime);
+
+        if (transform.position.x >= 11.47f)
+        {
+            dirRight = false;
+        }
+
+        if (transform.position.x <= -11.47)
+        {
+            dirRight = true;
+        }
+
+
     }
 
     private void Awake()
@@ -34,3 +53,4 @@ public class LoseGame : MonoBehaviour
     }
 
 }
+
