@@ -23,7 +23,7 @@ public class Leveltwo : MonoBehaviour
     void Update()
 
     {
-       if(score == 10)
+       if(score == 2)
         {
             WinGame();
         }
@@ -34,10 +34,10 @@ public class Leveltwo : MonoBehaviour
     {
 
         addScore();
-
         Destroy(collision.gameObject);
         sprites.color = new Color(2, 0, 0, 1);
     }
+
 
 
 
