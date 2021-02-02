@@ -10,66 +10,33 @@ public class Leveltwo : MonoBehaviour
     public GameObject [] PlayerScore;
     public Text ScoreText;
     public int score;
+    SpriteRenderer sprites;
 
     void Start()
 
     {
-        score = 9;
+        score = 0;
         ScoreText.text = "Player Score:" + score.ToString();
-
+        sprites = GetComponent<SpriteRenderer>();
     }
 
     void Update()
 
     {
-       
+       if(score == 10)
+        {
+            WinGame();
+        }
     }
 
 
-    public void DestoryScore()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        score--;
+        addScore();
 
-        for (int i = 0; i > score; i++)
-        {
-            PlayerScore[i].SetActive(false);
-            Debug.Log("HELLO");
-            
-        }
-
-        //if (score < 5)
-        //{
-        //    PlayerScore[0].SetActive(false);
-        //}
-
-        //if (score < 4)
-        //{
-        //    PlayerScore[1].SetActive(false);
-        //}
-
-        //if (score < 3)
-        //{
-        //    PlayerScore[2].SetActive(false);
-        //}
-
-        //if (score < 2)
-        //{
-        //    PlayerScore[3].SetActive(false);
-        //}
-
-        //if (score < 1)
-        //{
-        //    PlayerScore[4].SetActive(false);
-        //}
-
-
-        ScoreText.text = "Player Score:" + score.ToString();
-
-        if(score == 0)
-        {
-            GameOver();
-        }
+        Destroy(collision.gameObject);
+        sprites.color = new Color(2, 0, 0, 1);
     }
 
 
@@ -83,6 +50,12 @@ public class Leveltwo : MonoBehaviour
     public void WinGame()
     {
         SceneManager.LoadScene("Win");
+    }
+
+    private void addScore()
+    {
+        score++;
+        ScoreText.text = "Player Score:" + score.ToString();
     }
 
 }
