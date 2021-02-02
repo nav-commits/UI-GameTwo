@@ -28,13 +28,14 @@ public class Leveltwo : MonoBehaviour
 
     public void DestoryScore()
     {
-       
+
         score--;
 
         for (int i = 0; i > score; i++)
         {
             PlayerScore[i].SetActive(false);
             Debug.Log("HELLO");
+            
         }
 
         //if (score < 5)
