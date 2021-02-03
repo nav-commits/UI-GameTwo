@@ -24,8 +24,6 @@ public class LoseGame : MonoBehaviour
        
     }
 
-
-
     public void Update()
     {
      

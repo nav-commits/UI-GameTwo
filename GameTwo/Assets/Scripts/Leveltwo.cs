@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class Leveltwo : MonoBehaviour
 
 {
-    public GameObject [] PlayerScore;
+
     public Text ScoreText;
     public int score;
     SpriteRenderer sprites;
+  
 
     void Start()
 
@@ -18,34 +19,27 @@ public class Leveltwo : MonoBehaviour
         score = 0;
         ScoreText.text = "Player Score:" + score.ToString();
         sprites = GetComponent<SpriteRenderer>();
+       
     }
 
     void Update()
 
     {
-       if(score == 2)
+        if (score == 5 || score == 4 || score == 3)
         {
             WinGame();
+
+
         }
+
     }
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         addScore();
         Destroy(collision.gameObject);
         sprites.color = new Color(2, 0, 0, 1);
+   
     }
-
-
-
-
-    public void GameOver()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
-
 
     public void WinGame()
     {
