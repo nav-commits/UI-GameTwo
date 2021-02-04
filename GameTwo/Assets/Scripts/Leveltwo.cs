@@ -29,7 +29,6 @@ public class Leveltwo : MonoBehaviour
         {
             WinGame();
 
-
         }
 
         if(score == 2)
