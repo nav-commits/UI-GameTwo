@@ -32,6 +32,12 @@ public class Leveltwo : MonoBehaviour
 
         }
 
+        if(score == 2)
+        {
+
+            ScoreText.text = "You are Losing :" + score.ToString();
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
